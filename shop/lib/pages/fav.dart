@@ -25,15 +25,22 @@ class fav extends StatelessWidget {
                       cubit.search(inputss: v);
                     },
                     decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.search),
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: KPromary10color,
+                        ),
                         hintText: "Search",
+                        hintStyle: TextStyle(color: KPromary10color),
                         contentPadding: EdgeInsets.zero,
-                        suffixIcon: Icon(Icons.clear),
+                        suffixIcon: Icon(
+                          Icons.clear,
+                          color: KPromary10color,
+                        ),
                         filled: true,
-                        fillColor: Colors.grey.withOpacity(0.3),
+                        fillColor: KPromary11color,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(50),
-                            borderSide: BorderSide(color: Colors.black))),
+                            borderSide: BorderSide(color: KPromary10color))),
                   ),
                   SizedBox(
                     height: 10,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/helper/custom-button.dart';
 import 'package:shop/helper/custom_color.dart';
+import 'package:shop/helper/snack.dart';
 import 'package:shop/service/layout-states.dart';
 import 'package:shop/service/layout_cubit.dart';
 
@@ -51,7 +52,10 @@ class _buyState extends State<buy> {
                   ),
                   custombutton(
                     text: "Checkout",
-                    ontap: () {},
+                    ontap: () {
+                      showsnackbar(
+                          context, 'The payment process is efficient!');
+                    },
                   )
                 ],
               ),

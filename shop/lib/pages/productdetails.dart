@@ -161,24 +161,24 @@ class _detailesState extends State<detailes> {
               //     ),
               //   ),
               // ),
-              Center(
-                child: CircleAvatar(
-                  backgroundColor: KPromary8color,
-                  child: GestureDetector(
-                    onTap: () {
-                      cubit.add_remmove_cart_with_product(
-                          pro_cartid: widget.product.id.toString());
-                    },
-                    child: Icon(
-                      Icons.shopping_cart,
-                      color:
-                          cubit.cartsid.contains(widget.product.id.toString())
-                              ? KPromary9color
-                              : KPromary10color,
-                    ),
-                  ),
-                ),
-              ),
+              // Center(
+              //   child: CircleAvatar(
+              //     backgroundColor: KPromary8color,
+              //     child: GestureDetector(
+              //       onTap: () {
+              //         cubit.add_remmove_cart_with_product(
+              //             pro_cartid: widget.product.id.toString());
+              //       },
+              //       child: Icon(
+              //         Icons.shopping_cart,
+              //         color:
+              //             cubit.cartsid.contains(widget.product.id.toString())
+              //                 ? KPromary9color
+              //                 : KPromary10color,
+              //       ),
+              //     ),
+              //   ),
+              // ),
               // SizedBox(
               //   height: 10,
               // ),
