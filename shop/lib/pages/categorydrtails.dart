@@ -10,13 +10,14 @@ class detailscategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: KPromary9color,
       appBar: AppBar(
-          backgroundColor: KPrimary2Color,
+          backgroundColor: KPromary11color,
           title: SvgPicture.network(
             'https://raw.githubusercontent.com/mohamedhashim73/Youtube-Playlist-App/9ecc4ad2fb9c1efc3bc6af77295a21f85cf60fa8/images/logo.svg',
             height: 40,
             width: 40,
-            color: KPrimaryColor,
+            color: KPromary10color,
           ),
           leading: IconButton(
             color: Colors.black,
@@ -39,16 +40,14 @@ class detailscategory extends StatelessWidget {
             Text(
               'Category Name: ${categoryd.name}',
               style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: KPromary10color),
             ),
             SizedBox(height: 8),
             Text(
               'Category Description: ${categoryd.desc}',
-              style: TextStyle(
-                fontSize: 16,
-              ),
+              style: TextStyle(fontSize: 16, color: KPromary10color),
             ),
             // Add more details about the category as needed.
           ],

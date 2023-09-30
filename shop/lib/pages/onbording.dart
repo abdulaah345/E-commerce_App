@@ -46,6 +46,7 @@ class _onboardungState extends State<onboardung> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: KPromary9color,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -57,7 +58,7 @@ class _onboardungState extends State<onboardung> {
                 child: Text(
                   'Skip',
                   style: TextStyle(
-                    color: Kcolor,
+                    color: KPromary10color,
                     fontWeight: FontWeight.bold,
                   ),
                 ))
@@ -94,7 +95,7 @@ class _onboardungState extends State<onboardung> {
                   SmoothPageIndicator(
                       effect: ExpandingDotsEffect(
                         dotColor: Colors.grey,
-                        activeDotColor: Kcolor,
+                        activeDotColor: KPromary10color,
                         dotHeight: 10,
                         dotWidth: 10,
                         spacing: 5.0,
@@ -106,7 +107,7 @@ class _onboardungState extends State<onboardung> {
                   ),
                   Spacer(),
                   FloatingActionButton(
-                    backgroundColor: Kcolor,
+                    backgroundColor: KPromary10color,
                     onPressed: () {
                       if (islast) {
                         Navigator.pushNamed(context, Loginshop.id);
@@ -120,6 +121,7 @@ class _onboardungState extends State<onboardung> {
                     },
                     child: Icon(
                       Icons.arrow_forward_ios,
+                      color: KPromary9color,
                     ),
                   )
                 ],
@@ -139,6 +141,7 @@ class _onboardungState extends State<onboardung> {
           Text(
             '${model.text}',
             style: TextStyle(
+              color: KPromary10color,
               fontSize: 24.0,
               fontWeight: FontWeight.bold,
             ),
@@ -148,6 +151,7 @@ class _onboardungState extends State<onboardung> {
           ),
           Text('${model.body}',
               style: TextStyle(
+                color: KPromary10color,
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
               )),

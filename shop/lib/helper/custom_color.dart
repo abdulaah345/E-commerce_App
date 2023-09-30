@@ -10,8 +10,9 @@ const KPromary5color = Color(0xff676D7E);
 
 const KPromary7color = Color(0xffAC8A4D);
 
-const KPromary8color = Color(0xffF1DEAE);
+const KPromary8color = Color.fromARGB(255, 239, 182, 40);
 
 const KPromary9color = Color(0xff000000);
 
 const KPromary10color = Color(0xffFFFFFF);
+const KPromary11color = Color(0xff313131);

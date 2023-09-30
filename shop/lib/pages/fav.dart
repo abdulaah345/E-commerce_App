@@ -15,6 +15,7 @@ class fav extends StatelessWidget {
         listener: (context, state) {},
         builder: (context, state) {
           return Scaffold(
+            backgroundColor: KPromary9color,
             body: Padding(
               padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
               child: Column(
@@ -115,7 +116,7 @@ Widget _fivproducts(
   return Container(
     margin: EdgeInsets.symmetric(vertical: 8),
     padding: EdgeInsets.symmetric(vertical: 15, horizontal: 12.5),
-    color: KPrimary2Color,
+    color: KPromary9color,
     child: Row(
       children: [
         Center(
@@ -139,7 +140,7 @@ Widget _fivproducts(
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: KPromary5color),
+                  color: KPromary10color),
               overflow: TextOverflow.ellipsis,
             ),
             SizedBox(
@@ -154,7 +155,7 @@ Widget _fivproducts(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25)),
               textColor: Colors.white,
-              color: Color(0xff676D7E),
+              color: KPromary11color,
             )
           ],
         ))

@@ -27,17 +27,17 @@ class Loginshop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: KPrimary2Color,
+        backgroundColor: KPromary9color,
         appBar: AppBar(
-          backgroundColor: KPrimary2Color,
+          backgroundColor: KPromary11color,
           leading: IconButton(
-            color: Colors.black,
+            color: KPromary10color,
             onPressed: () {
               Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back_ios,
-              color: KPrimaryColor,
+              color: KPromary10color,
             ),
           ),
         ),
@@ -70,15 +70,15 @@ class Loginshop extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .headline5
-                            ?.copyWith(color: KPrimaryColor),
-                        selectionColor: Colors.white,
+                            ?.copyWith(color: KPromary10color),
+                        selectionColor: KPromary11color,
                       ),
                       Text(
                         'login now to browse our hot offers',
                         style: Theme.of(context)
                             .textTheme
                             .bodyLarge
-                            ?.copyWith(color: Colors.grey),
+                            ?.copyWith(color: KPromary10color),
                       ),
                       SizedBox(
                         height: 30.0,
@@ -124,7 +124,7 @@ class Loginshop extends StatelessWidget {
                         children: [
                           Text(
                             'dont have an account?',
-                            style: TextStyle(color: KPrimaryColor),
+                            style: TextStyle(color: KPromary10color),
                           ),
                           GestureDetector(
                             onTap: () {
@@ -132,8 +132,7 @@ class Loginshop extends StatelessWidget {
                             },
                             child: Text(
                               ' Register',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 136, 163, 234)),
+                              style: TextStyle(color: KPromary8color),
                             ),
                           ),
                         ],

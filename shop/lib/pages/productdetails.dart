@@ -35,20 +35,24 @@ class _detailesState extends State<detailes> {
     final cubit = BlocProvider.of<layoutcubit>(context);
 
     return Scaffold(
+      backgroundColor: KPromary9color,
       appBar: AppBar(
-          backgroundColor: KPrimary2Color,
+          backgroundColor: KPromary11color,
           title: SvgPicture.network(
             'https://raw.githubusercontent.com/mohamedhashim73/Youtube-Playlist-App/9ecc4ad2fb9c1efc3bc6af77295a21f85cf60fa8/images/logo.svg',
             height: 40,
             width: 40,
-            color: KPrimaryColor,
+            color: KPromary10color,
           ),
           leading: IconButton(
-            color: Colors.black,
+            color: KPromary10color,
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_back_ios),
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: KPromary10color,
+            ),
           )),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -68,41 +72,39 @@ class _detailesState extends State<detailes> {
               Text(
                 widget.product.name!,
                 style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: KPromary10color),
               ),
               SizedBox(height: 8),
               Text(
                 'Price: \$${widget.product.price}',
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: KPromary10color),
               ),
               SizedBox(height: 8),
               Text(
                 'Old Price: \$${widget.product.oldprice}',
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  decoration: TextDecoration.lineThrough,
-                ),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.lineThrough,
+                    color: KPromary10color),
               ),
               SizedBox(height: 8),
               Text(
                 'Description:',
                 style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: KPromary10color),
               ),
               SizedBox(height: 8),
               Text(
                 widget.product.description!,
-                style: TextStyle(
-                  fontSize: 16,
-                ),
+                style: TextStyle(fontSize: 16, color: KPromary10color),
               ),
               // SizedBox(height: 8),
               // Row(
@@ -153,7 +155,7 @@ class _detailesState extends State<detailes> {
               //         'Add to Cart',
               //         style: TextStyle(
               //           fontSize: 18,
-              //           fontWeight: FontWeight.bold,
+              //           fontWeight: F9ontWeight.bold,
               //         ),
               //       ),
               //     ),
@@ -161,7 +163,7 @@ class _detailesState extends State<detailes> {
               // ),
               Center(
                 child: CircleAvatar(
-                  backgroundColor: Colors.black45,
+                  backgroundColor: KPromary8color,
                   child: GestureDetector(
                     onTap: () {
                       cubit.add_remmove_cart_with_product(
@@ -171,8 +173,8 @@ class _detailesState extends State<detailes> {
                       Icons.shopping_cart,
                       color:
                           cubit.cartsid.contains(widget.product.id.toString())
-                              ? Colors.red
-                              : Colors.white,
+                              ? KPromary9color
+                              : KPromary10color,
                     ),
                   ),
                 ),

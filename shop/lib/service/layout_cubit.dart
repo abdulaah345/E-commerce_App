@@ -186,6 +186,7 @@ class layoutcubit extends Cubit<layoutstates> {
 
   List<productmodel> carts = [];
   int totalprice = 0;
+  int qyt = 0;
   Set<String> cartsid = {};
   Future<void> getcart() async {
     carts.clear();
@@ -194,8 +195,10 @@ class layoutcubit extends Cubit<layoutstates> {
       'Authorization': token!,
       'Lang': 'en',
     });
+
     var responsbody = jsonDecode(response.body);
     totalprice = responsbody['data']['total'].toInt();
+    qyt = responsbody['data']['cart_items'].length;
     if (responsbody['status'] == true) {
       for (var item in responsbody['data']['cart_items']) {
         cartsid.add(item['product']['id'].toString());
@@ -245,5 +248,13 @@ class layoutcubit extends Cubit<layoutstates> {
     } else {
       emit(addtocartfailed());
     }
+  }
+
+  double total() {
+    double total = 0;
+    for (var item in carts) {
+      total += item.price!;
+    }
+    return total;
   }
 }

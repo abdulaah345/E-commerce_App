@@ -19,18 +19,18 @@ class navigatorpar extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            backgroundColor: KPrimary2Color,
+            backgroundColor: KPromary11color,
             title: SvgPicture.network(
               'https://raw.githubusercontent.com/mohamedhashim73/Youtube-Playlist-App/9ecc4ad2fb9c1efc3bc6af77295a21f85cf60fa8/images/logo.svg',
               height: 40,
               width: 40,
-              color: KPrimaryColor,
+              color: KPromary10color,
             ),
           ),
           bottomNavigationBar: BottomNavigationBar(
-              backgroundColor: KPrimary2Color,
+              backgroundColor: KPromary10color,
               type: BottomNavigationBarType.fixed,
-              selectedItemColor: KPrimaryColor,
+              selectedItemColor: KPromary9color,
               unselectedItemColor: Colors.grey,
               currentIndex: cubit.navbarindex,
               onTap: (index) {

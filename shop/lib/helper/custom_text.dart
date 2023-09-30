@@ -24,10 +24,11 @@ class customtext extends StatelessWidget {
       onChanged: onchanged,
       decoration: InputDecoration(
         hintText: hinttext,
-        hintStyle: TextStyle(color: KPrimaryColor),
+        hintStyle: TextStyle(color: KPromary10color),
         enabledBorder:
-            OutlineInputBorder(borderSide: BorderSide(color: KPrimaryColor)),
+            OutlineInputBorder(borderSide: BorderSide(color: KPromary10color)),
       ),
+      style: TextStyle(color: KPromary10color),
     );
   }
 }

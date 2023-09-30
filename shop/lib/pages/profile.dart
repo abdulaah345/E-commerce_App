@@ -20,7 +20,7 @@ class profile extends StatelessWidget {
         final cubit = BlocProvider.of<layoutcubit>(context);
         if (cubit.ussermodel == null) cubit.getuserdata();
         return Scaffold(
-            backgroundColor: KPrimary3Color,
+            backgroundColor: KPromary9color,
             body: cubit.ussermodel != null
                 ? Padding(
                     padding: const EdgeInsets.all(30),
@@ -47,19 +47,19 @@ class profile extends StatelessWidget {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: KPrimary2Color,
+                              color: KPromary11color,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: ListTile(
                               title: Text(cubit.ussermodel!.name!,
-                                  style: TextStyle(color: Colors.black)),
+                                  style: TextStyle(color: KPromary10color)),
                               leading: Icon(
                                 Icons.person,
-                                color: Colors.grey,
+                                color: KPromary8color,
                               ),
                               trailing: Icon(
                                 Icons.arrow_forward,
-                                color: Colors.grey,
+                                color: KPromary8color,
                               ),
                             ),
                           ),

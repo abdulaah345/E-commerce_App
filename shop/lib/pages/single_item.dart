@@ -203,6 +203,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/helper/custom_color.dart';
+import 'package:shop/models/cart.dart';
 import 'package:shop/models/products.dart';
 import 'package:shop/service/layout_cubit.dart';
 
@@ -216,7 +217,7 @@ class Singleitem extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<Singleitem> {
-  int qtn = 0;
+  int qtn = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -224,7 +225,7 @@ class _MyWidgetState extends State<Singleitem> {
 
     return Container(
       padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(color: KPrimary2Color),
+      decoration: BoxDecoration(color: KPromary9color),
       child: Column(
         children: [
           Row(
@@ -248,7 +249,7 @@ class _MyWidgetState extends State<Singleitem> {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: KPromary5color,
+                        color: KPromary10color,
                       ),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -257,7 +258,10 @@ class _MyWidgetState extends State<Singleitem> {
                     ),
                     Row(
                       children: [
-                        Text("${widget.productss.price!} \$"),
+                        Text(
+                          "${widget.productss.price!} \$",
+                          style: TextStyle(color: KPromary10color),
+                        ),
                         SizedBox(
                           width: 5,
                         ),
@@ -265,8 +269,8 @@ class _MyWidgetState extends State<Singleitem> {
                           Text(
                             " ${widget.productss.oldprice!} \$",
                             style: TextStyle(
-                              decoration: TextDecoration.lineThrough,
-                            ),
+                                decoration: TextDecoration.lineThrough,
+                                color: KPromary10color),
                           ),
                       ],
                     ),
@@ -302,7 +306,7 @@ class _MyWidgetState extends State<Singleitem> {
                           },
                           child: Icon(
                             Icons.delete,
-                            color: Colors.red,
+                            color: KPromary10color,
                           ),
                         ),
                       ],
@@ -315,57 +319,59 @@ class _MyWidgetState extends State<Singleitem> {
                             if (qtn >= 1) {
                               setState(() {
                                 qtn--;
+                                cubit.totalprice -= widget.productss.price!;
                               });
                             }
                           },
                           padding: EdgeInsets.zero,
                           child: CircleAvatar(
-                            backgroundColor: Colors.red,
+                            backgroundColor: KPromary10color,
                             maxRadius: 13,
                             child: Icon(
                               Icons.remove,
-                              color: Colors.white,
+                              color: KPromary9color,
                             ),
                           ),
                         ),
                         Text(
                           qtn.toString(),
                           style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          ),
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              color: KPromary10color),
                         ),
                         CupertinoButton(
                           onPressed: () {
                             setState(() {
                               qtn++;
+                              cubit.totalprice += widget.productss.price!;
                             });
                           },
                           padding: EdgeInsets.zero,
                           child: CircleAvatar(
-                            backgroundColor: Colors.red,
+                            backgroundColor: KPromary10color,
                             maxRadius: 13,
                             child: Icon(
                               Icons.add,
-                              color: Colors.white,
+                              color: KPromary9color,
                             ),
                           ),
                         ),
                         SizedBox(
                           width: 10,
                         ),
-                        Expanded(
-                          child: Container(
-                            child: Text(
-                              "Total Price: \$${widget.productss.price! * qtn} ",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: KPromary5color,
-                              ),
-                            ),
-                          ),
-                        ),
+                        // Expanded(
+                        //   child: Container(
+                        //     child: Text(
+                        //       "Total Price: \$${widget.productss.price! * qtn} ",
+                        //       style: TextStyle(
+                        //         fontSize: 18,
+                        //         fontWeight: FontWeight.bold,
+                        //         color: KPromary10color,
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
                       ],
                     ),
                   ],

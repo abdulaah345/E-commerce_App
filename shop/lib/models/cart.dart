@@ -1,4 +1,4 @@
-class productmodel {
+class cartmodel {
   String? name;
   String? description;
   int? price;
@@ -6,8 +6,9 @@ class productmodel {
   String? image;
   int? discont;
   int? id;
+  int qtn = 0;
 
-  productmodel.fromjson({required Map<String, dynamic> data}) {
+  cartmodel.fromjson({required Map<String, dynamic> data}) {
     id = data['id'].toInt();
     price = data['price'].toInt();
     oldprice = data['old_price'].toInt();
@@ -15,5 +16,6 @@ class productmodel {
     description = data['description'].toString();
     name = data['name'].toString();
     image = data['image'].toString();
+    qtn = data['quantity'];
   }
 }

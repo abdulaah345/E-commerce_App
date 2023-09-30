@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop/helper/custom-button.dart';
 import 'package:shop/helper/custom_color.dart';
 import 'package:shop/models/products.dart';
+import 'package:shop/pages/buy.dart';
 import 'package:shop/pages/single_item.dart';
 import 'package:shop/service/layout-states.dart';
 import 'package:shop/service/layout_cubit.dart';
@@ -21,6 +23,7 @@ class _cartState extends State<cart> {
       listener: (context, stats) {},
       builder: (context, state) {
         return Scaffold(
+          backgroundColor: KPromary9color,
           body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12.5, vertical: 10),
             child: Column(
@@ -52,7 +55,14 @@ class _cartState extends State<cart> {
                 //         color: KPromary5color),
                 //     overflow: TextOverflow.ellipsis,
                 //   ),
-                // )
+                // ),
+                custombutton(
+                  text: "Buy Now",
+                  ontap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => buy()));
+                  },
+                )
               ],
             ),
           ),

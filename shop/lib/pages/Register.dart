@@ -47,17 +47,17 @@ class register extends StatelessWidget {
       },
       builder: (context, state) {
         return Scaffold(
-            backgroundColor: KPrimary2Color,
+            backgroundColor: KPromary9color,
             appBar: AppBar(
-              backgroundColor: KPrimary2Color,
+              backgroundColor: KPromary11color,
               leading: IconButton(
-                color: Colors.black,
+                color: KPromary10color,
                 onPressed: () {
                   Navigator.pop(context);
                 },
                 icon: Icon(
                   Icons.arrow_back_ios,
-                  color: KPrimaryColor,
+                  color: KPromary10color,
                 ),
               ),
             ),
@@ -72,15 +72,15 @@ class register extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .headline5
-                          ?.copyWith(color: KPrimaryColor),
-                      selectionColor: Colors.white,
+                          ?.copyWith(color: KPromary10color),
+                      selectionColor: KPromary10color,
                     ),
                     Text(
                       'login now to browse our hot offers',
                       style: Theme.of(context)
                           .textTheme
                           .bodyLarge
-                          ?.copyWith(color: Colors.grey),
+                          ?.copyWith(color: KPromary10color),
                     ),
                     SizedBox(
                       height: 30.0,
@@ -136,7 +136,7 @@ class register extends StatelessWidget {
                       children: [
                         Text(
                           'already have an account?',
-                          style: TextStyle(color: KPrimaryColor),
+                          style: TextStyle(color: KPromary10color),
                         ),
                         GestureDetector(
                           onTap: () {
@@ -144,8 +144,7 @@ class register extends StatelessWidget {
                           },
                           child: Text(
                             ' Login',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 136, 163, 234)),
+                            style: TextStyle(color: KPromary8color),
                           ),
                         ),
                       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop/helper/custom_color.dart';
 import 'package:shop/models/cataegory.dart';
 import 'package:shop/pages/categorydrtails.dart';
 import 'package:shop/service/layout_cubit.dart';
@@ -11,6 +12,7 @@ class category extends StatelessWidget {
     List<categorymodel> catedata = BlocProvider.of<layoutcubit>(context).cate;
 
     return Scaffold(
+      backgroundColor: KPromary9color,
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
         child: GridView.builder(
@@ -42,7 +44,10 @@ class category extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Text(catedata[index].name!)
+                      Text(
+                        catedata[index].name!,
+                        style: TextStyle(color: KPromary10color),
+                      )
                     ],
                   ),
                 ),

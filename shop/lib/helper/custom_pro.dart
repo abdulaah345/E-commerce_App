@@ -10,18 +10,18 @@ class custompro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: KPrimary2Color,
+        color: KPromary11color,
         borderRadius: BorderRadius.circular(30),
       ),
       child: ListTile(
-        title: Text(title!, style: TextStyle(color: Colors.black)),
+        title: Text(title!, style: TextStyle(color: KPromary10color)),
         leading: Icon(
           leading,
-          color: Colors.grey,
+          color: KPromary8color,
         ),
         trailing: Icon(
           Icons.arrow_forward,
-          color: Colors.grey,
+          color: KPromary8color,
         ),
       ),
     );

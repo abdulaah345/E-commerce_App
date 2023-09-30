@@ -21,6 +21,7 @@ class homepage extends StatelessWidget {
         listener: (context, state) {},
         builder: (context, state) {
           return Scaffold(
+            backgroundColor: KPromary9color,
             body: Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 18.0, horizontal: 15),
@@ -31,12 +32,19 @@ class homepage extends StatelessWidget {
                       Cubit.filer(input: input);
                     },
                     decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.search),
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: KPromary10color,
+                        ),
                         hintText: "Search",
+                        hintStyle: TextStyle(color: KPromary10color),
                         contentPadding: EdgeInsets.zero,
-                        suffixIcon: Icon(Icons.clear),
+                        suffixIcon: Icon(
+                          Icons.clear,
+                          color: KPromary10color,
+                        ),
                         filled: true,
-                        fillColor: Colors.grey.withOpacity(0.3),
+                        fillColor: KPromary11color,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(50),
                             borderSide: BorderSide(color: Colors.black))),
@@ -72,7 +80,7 @@ class homepage extends StatelessWidget {
                     child: SmoothPageIndicator(
                         effect: ExpandingDotsEffect(
                           dotColor: Colors.grey,
-                          activeDotColor: Kcolor,
+                          activeDotColor: KPromary10color,
                           dotHeight: 10,
                           dotWidth: 10,
                           spacing: 5.0,
@@ -89,14 +97,14 @@ class homepage extends StatelessWidget {
                       Text(
                         'Categories',
                         style: TextStyle(
-                            color: Color(0xff676D7E),
+                            color: KPromary10color,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
                       Text(
                         'View all',
                         style: TextStyle(
-                            color: Color(0xff676D7E),
+                            color: KPromary10color,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
@@ -150,14 +158,14 @@ class homepage extends StatelessWidget {
                       Text(
                         'Products',
                         style: TextStyle(
-                            color: Color(0xff676D7E),
+                            color: KPromary10color,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
                       Text(
                         'View all',
                         style: TextStyle(
-                            color: Color(0xff676D7E),
+                            color: KPromary10color,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
@@ -214,7 +222,7 @@ Widget _productitem(
                   builder: (context) => detailes(product: model)));
         },
         child: Container(
-          color: KPrimary2Color,
+          color: KPromary9color,
           padding: EdgeInsets.symmetric(vertical: 40, horizontal: 10),
           child: Column(children: [
             Expanded(
@@ -228,7 +236,9 @@ Widget _productitem(
             Text(
               model.name!,
               style: TextStyle(
-                  fontWeight: FontWeight.bold, overflow: TextOverflow.ellipsis),
+                  fontWeight: FontWeight.bold,
+                  overflow: TextOverflow.ellipsis,
+                  color: KPromary10color),
             ),
             SizedBox(
               width: 10,
@@ -240,7 +250,7 @@ Widget _productitem(
                   children: [
                     Text(
                       "${model.price!} \$",
-                      style: TextStyle(fontSize: 13),
+                      style: TextStyle(fontSize: 13, color: KPromary10color),
                     ),
                     SizedBox(
                       width: 10,
@@ -248,7 +258,7 @@ Widget _productitem(
                     Text(
                       "${model.oldprice!} \$",
                       style: TextStyle(
-                          color: Colors.grey,
+                          color: KPromary10color,
                           fontSize: 12.5,
                           decoration: TextDecoration.lineThrough),
                     ),
@@ -272,7 +282,7 @@ Widget _productitem(
         ),
       ),
       CircleAvatar(
-        backgroundColor: Colors.black45,
+        backgroundColor: KPromary8color,
         child: GestureDetector(
           onTap: () {
             cubit.add_remmove_cart_with_product(
@@ -281,8 +291,8 @@ Widget _productitem(
           child: Icon(
             Icons.shopping_cart,
             color: cubit.cartsid.contains(model.id.toString())
-                ? Colors.red
-                : Colors.white,
+                ? KPromary9color
+                : KPromary10color,
           ),
         ),
       )

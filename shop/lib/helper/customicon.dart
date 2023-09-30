@@ -12,7 +12,7 @@ class customcon extends StatelessWidget {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        color: KPrimary2Color,
+        color: KPromary11color,
         borderRadius: BorderRadius.circular(30),
       ),
       child: Padding(
@@ -23,7 +23,7 @@ class customcon extends StatelessWidget {
             children: [
               Icon(
                 icon,
-                color: Colors.grey,
+                color: KPromary8color,
               ),
               SizedBox(
                 width: 25,
@@ -35,7 +35,7 @@ class customcon extends StatelessWidget {
                   children: [
                     Text(
                       text,
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: KPromary10color),
                     ),
                   ],
                 ),
@@ -47,7 +47,7 @@ class customcon extends StatelessWidget {
                   onPressed: onpressed,
                   icon: Icon(
                     Icons.arrow_forward_ios_rounded,
-                    color: Colors.grey,
+                    color: KPromary8color,
                   ))
             ],
           ),
